@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { Github, Linkedin, Code2, Palette, FileText } from "lucide-react";
+import dp from "../assets/images/test.png";
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -46,14 +47,14 @@ export default function Hero() {
         ref={profileRef}
         className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] overflow-hidden rounded-full relative flex-shrink-0 border-4 border-blue-500/30"
       >
-        <img
-          src="../assets/images/test.png"
-          // src="C:\Users\manis\OneDrive\Desktop\Project final year\portfolio\p5final\project\man.jpeg"
-          
-          alt="Manish Kumar - Profile Picture"
-          className="object-cover w-full h-full"
-          loading="lazy"
-        />
+       <img
+ // This line should be corrected to: 
+  src={dp}  // This is the correct syntax to pass the image source
+  alt="Manish Kumar - Profile Picture"
+  className="object-cover w-full h-full"
+  loading="lazy"
+/>
+
         <div className="absolute p-3 rounded-full -top-4 -right-4 bg-blue-500/20 backdrop-blur-sm">
           <Code2 className="w-6 h-6 text-blue-400" />
         </div>
