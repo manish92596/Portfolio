@@ -47,7 +47,7 @@ export default function Hero() {
         className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] overflow-hidden rounded-full relative flex-shrink-0 border-4 border-blue-500/30"
       >
         <img
-          src="src/assets/images/test.png"
+          src="../assets/images/test.png"
           // src="C:\Users\manis\OneDrive\Desktop\Project final year\portfolio\p5final\project\man.jpeg"
           
           alt="Manish Kumar - Profile Picture"
