@@ -1,18 +1,21 @@
 import { Experience } from './types';
-
+import plant from "../../assets/images/plant.png";
 export const experiences: Experience[] = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Innovations Inc.",
-    location: "San Francisco, CA",
-    period: "2021 - Present",
+    title: "Software Developer Intern",
+    company: "IIITG",
+    location: "Guwahati, Assam",
+    period: "Aug 2024 - Nov 2024",
     description: [
-      "Led the development of a high-performance web application serving 1M+ users",
-      "Implemented microservices architecture reducing system latency by 40%",
-      "Mentored junior developers and conducted code reviews",
+      "Automates plant species identification using Vision Transformers and transfer learning",
+      "Integrates Google Generative AI for interactive plant information retrieval",
+      "High accuracy of 95.97% with precision, recall, and F1-score each at 0.96%",
     ],
-    technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
-    projectUrl: "#"
+    technologies: ["Deep Learning", "Python", "PyTorch", "torch", "torchvision", "transformers", "scikit-learn", "langchain-google-genai", "sentence-transformers", "pickle", "Streamlit"],
+
+    image: plant,
+    projectUrl: "https://github.com/manish92596/PlantPedia"
   },
+  
 ];
+

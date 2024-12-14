@@ -1,22 +1,30 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const skills = [
-  { name: 'React', color: '#61DAFB' },
-  { name: 'TypeScript', color: '#3178C6' },
-  { name: 'Node.js', color: '#339933' },
-  { name: 'JavaScript', color: '#F7DF1E' },
-  { name: 'HTML5', color: '#E34F26' },
-  { name: 'CSS3', color: '#1572B6' },
-  { name: 'Python', color: '#3776AB' },
-  { name: 'GraphQL', color: '#E10098' },
-  { name: 'MongoDB', color: '#47A248' },
-  { name: 'Docker', color: '#2496ED' },
-  { name: 'Git', color: '#F05032' },
-  { name: 'AWS', color: '#FF9900' },
-  { name: 'Redux', color: '#764ABC' },
-  { name: 'Tailwind', color: '#06B6D4' },
-  { name: 'Next.js', color: '#339933' }
+  { name: 'C++', color: '#61DAFB' },
+  { name: 'Java', color: '#3178C6' },
+  { name: 'Python', color: '#339933' },
+  { name: 'Flask', color: '#F7DF1E' },
+  { name: 'HTML5', color: '#06B6D4' },
+  { name: 'CSS3', color: '#339933' },
+  { name: 'JavaScript', color: '#3776AB' },
+  { name: 'TypeScript', color: '#06B6D4' },
+  { name: 'Node.js', color: '#E34F26' },
+  { name: 'Express.js', color: '#1572B6' },
+  { name: 'React', color: '#E10098' },
+  { name: 'Tailwind', color: '#47A248' },
+  { name: 'Bootstrap', color: '#2496ED' },
+  { name: 'Material UI', color: '#F05032' },
+  { name: 'Redux', color: '#FF9900' },
+  { name: 'MySQL', color: '#764ABC' },
+  { name: 'MongoDB', color: '#06B6D4' },
+  { name: 'Firebase', color: '#339933' },
+  { name: 'GitHub', color: '#F05032' },
+  { name: 'Docker', color: '#FF9900' },
+  { name: 'AWS', color: '#764ABC' }
 ];
 
 export default function Skills() {
@@ -27,7 +35,7 @@ export default function Skills() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Initial setup
+    
       gsap.set(bubbleRefs.current, { 
         opacity: 0,
         scale: 0,
@@ -35,7 +43,7 @@ export default function Skills() {
         y: 0
       });
 
-      // Floating animation for central bubble
+   
       gsap.to(centralBubbleRef.current, {
         y: -20,
         duration: 2,
@@ -44,7 +52,7 @@ export default function Skills() {
         ease: "power1.inOut"
       });
 
-      // Pulsating glow animation
+ 
       gsap.to(centralBubbleRef.current, {
         filter: 'drop-shadow(0 0 20px rgba(59, 130, 246, 0.7))',
         duration: 1.5,
@@ -61,33 +69,35 @@ export default function Skills() {
     if (isAnimating.current) return;
     isAnimating.current = true;
 
-    const radius = 250; // Increased radius for better spacing
+    const radius = 300; 
     const totalSkills = skills.length;
-    const angleStep = (2 * Math.PI) / totalSkills;
+    const angleStep = (2 * Math.PI) / totalSkills; 
 
     bubbleRefs.current.forEach((bubble, index) => {
       if (!bubble) return;
 
-      // Calculate position on the circle
-      const angle = angleStep * index - Math.PI / 2; // Start from top (-Math.PI/2)
-      const x = Math.cos(angle) * radius;
-      const y = Math.sin(angle) * radius;
+    
+      const angle = angleStep * index; 
+      const x = Math.cos(angle) * radius; 
+      const y = Math.sin(angle) * radius; 
 
+      
       gsap.to(bubble, {
         x,
         y,
         opacity: 1,
-        scale: 1,
+        scale: 1, 
         duration: 0.8,
         ease: "elastic.out(1, 0.7)",
-        delay: index * 0.03
+        delay: index * 0.03, 
       });
     });
 
+  
     gsap.to(centralBubbleRef.current, {
-      scale: 1.2,
-      filter: 'drop-shadow(0 0 30px rgba(59, 130, 246, 0.8))',
-      duration: 0.5
+      scale: 1,
+      filter: "drop-shadow(0 0 30px rgba(59, 130, 246, 0.8))",
+      duration: 0.5,
     });
   };
 
@@ -137,43 +147,38 @@ export default function Skills() {
         ref={containerRef} 
         className="relative h-[700px] flex items-center justify-center"
       >
-        {/* Skill bubbles */}
+      
         {skills.map((skill, index) => (
-          <div
-            key={index}
-            ref={el => bubbleRefs.current[index] = el}
-            className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-          >
-            <div 
-              className="relative transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                className="px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-full backdrop-blur-sm whitespace-nowrap hover:scale-110"
-                style={{ 
-                  backgroundColor: `${skill.color}15`,
-                  borderColor: `${skill.color}30`,
-                  color: skill.color,
-                  filter: `drop-shadow(0 0 10px ${skill.color}40)`
-                }}
-              >
-                {skill.name}
-              </div>
-            </div>
-          </div>
+  <div
+  key={index}
+  ref={el => bubbleRefs.current[index] = el}
+  className="absolute flex items-center justify-center w-32 h-10 text-sm font-medium text-white bg-opacity-20"
+  style={{
+    backgroundColor: `${skill.color}15`,
+   
+    borderColor: `${skill.color}`,
+        borderWidth: '0.2px', 
+        borderStyle: 'solid', 
+    color: skill.color,
+    filter: `drop-shadow(0 0 10px ${skill.color}40)`,
+    borderRadius: '35px' 
+  }}
+>
+  {skill.name}
+</div>
+
         ))}
 
-        {/* Central bubble */}
+      
         <div
           ref={centralBubbleRef}
-          className="relative cursor-none transform-gpu"
+          className="relative flex items-center justify-center w-40 h-40 text-white border rounded-full bg-gradient-to-br from-blue-500/20 to-emerald-500/20 backdrop-blur-sm border-white/20"
           onMouseEnter={handleCentralBubbleHover}
           onMouseLeave={handleCentralBubbleLeave}
         >
-          <div className="flex items-center justify-center w-40 h-40 text-white transition-all duration-300 border rounded-full bg-gradient-to-br from-blue-500/20 to-emerald-500/20 backdrop-blur-sm border-white/20 hover:border-blue-500/50 transform-gpu">
-            <span className="text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Explore Skills
-            </span>
-          </div>
+          <span className="text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+            Explore Skills
+          </span>
         </div>
       </div>
     </section>
