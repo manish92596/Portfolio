@@ -9,7 +9,7 @@ import Experience from './components/Experience';
 import LoadingSpinner from './components/LoadingSpinner';
 import { updateCursorPosition } from './utils/cursor';
 
-// Lazy load components that are not immediately visible
+
 const Projects = React.lazy(() => import('./components/Projects'));
 const Contact = React.lazy(() => import('./components/Contact'));
 
