@@ -2,7 +2,7 @@ import { Experience } from './types';
 import plant from "../../assets/images/plant.png";
 export const experiences: Experience[] = [
   {
-    title: "Software Developer Intern",
+    title: "Research Intern",
     company: "IIITG",
     location: "Guwahati, Assam",
     period: "Aug 2024 - Nov 2024",
