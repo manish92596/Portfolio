@@ -18,7 +18,7 @@ const projects = [
     image: apiSecurityImage,
     tech: ["Python", "Flask", "React", "JavaScript","MySQL", "Material UI", "AWS-EC2", "RDS", "Auto Scaling"] ,
     // links: { demo: "#", github: "#" },
-    links: { demo: "#", github: "https://github.com/manish92596/Flipkart-Grid--Api-Security-Dashboard" },
+    links: { demo: "http://43.204.234.122/", github: "https://github.com/manish92596/Flipkart-Grid--Api-Security-Dashboard" },
     // icon: <Sparkles className="w-6 h-6 text-purple-400" />
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     description: "Skillwise is an innovative e-learning platform designed to bridge the gap between education and skill application. It offers a wide range of courses tailored to both beginners and professionals, aiming to enhance their knowledge and skills in various domains.",
     image: skillwise,
     tech: ["React", "Node.js", "Express.js", "JavaScript", "Bootstrap", "MySQL"],
-    links: { demo: "#", github: "https://github.com/manish92596/SkillWise_E-Learning-Platform" },
+    links: {github: "https://github.com/manish92596/SkillWise_E-Learning-Platform" },
     // icon: <Cpu className="w-6 h-6 text-blue-400" />
   },
   
@@ -35,7 +35,7 @@ const projects = [
     description: "A real estate application is a platform that enables users to effortlessly search for and explore properties available for sale or rent. The application offers essential features that make the property search process seamless, including property search functionality, detailed property information, and the ability to contact the listing agent.",
     image: realestate,
     tech: ["MySQL", "Java", "Java Swing", "AWT", "JDBC connector"],
-    links: { demo: "#", github: "https://github.com/manish92596/Real-Estate-Management-System" },
+    links: { github: "https://github.com/manish92596/Real-Estate-Management-System" },
     // icon: <Cpu className="w-6 h-6 text-blue-400" />
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     description: "This application uses a machine learning model to predict whether an employee will leave or stay based on features like satisfaction level, last evaluation score, and more. The model is built using the K-Nearest Neighbors (KNN) algorithm, with hyperparameter tuning via GridSearchCV for optimal accuracy.",
     image: etp,
     tech: ["Machine Learning","Python", "Pandas", "NumPy", "scikit-learn"," Matplotlib", "Seaborn", "Streamlit", "pickle"],
-    links: { demo: "#", github: "https://github.com/manish92596/Employee-Turnover-Prediction" },
+    links: { demo: "http://13.127.68.160/etpp/", github: "https://github.com/manish92596/Employee-Turnover-Prediction" },
     // icon: <Globe className="w-6 h-6 text-green-400" />
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     description: "Smart Resume Analyzer is a web app that ranks resumes based on their relevance to a job description. It extracts key details like job titles, skills, and experience, calculates a relevance score, and generates a downloadable PDF report to help recruiters streamline the hiring process.",
     image: sra,
     tech: ["NLP","Streamlit", "Python", "SpaCy", "Sentence-Transformers", "PyPDF2"],
-    links: { demo: "#", github: "https://github.com/manish92596/Smart-Resume-Analyzer?tab=readme-ov-file" },
+    links: {github: "https://github.com/manish92596/Smart-Resume-Analyzer?tab=readme-ov-file" },
     // icon: <Shield className="w-6 h-6 text-red-400" />
   }
 ];
@@ -153,6 +153,17 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex space-x-4">
+                {project.links.demo && (
+                    <a
+                      href={project.links.demo}
+                       target="_blank"
+                    rel="noopener noreferrer"
+                      className="flex items-center px-4 py-2 space-x-2 text-blue-400 transition-all duration-300 border rounded-full bg-white/5 hover:bg-white/10 border-white/10 hover:border-blue-500/50 backdrop-blur-sm hover:text-blue-300"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
                   {/* <a
                     href={project.links.demo}
                     className="flex items-center px-4 py-2 space-x-2 text-blue-400 transition-all duration-300 border rounded-full bg-white/5 hover:bg-white/10 border-white/10 hover:border-blue-500/50 backdrop-blur-sm hover:text-blue-300"
@@ -161,7 +172,10 @@ export default function Projects() {
                     <span>Live Demo</span>
                   </a> */}
                   <a
+                  
                     href={project.links.github}
+                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center px-4 py-2 space-x-2 text-blue-400 transition-all duration-300 border rounded-full bg-white/5 hover:bg-white/10 border-white/10 hover:border-blue-500/50 backdrop-blur-sm hover:text-blue-300"
                   >
                     <Github className="w-4 h-4" />
@@ -176,3 +190,16 @@ export default function Projects() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
