@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { Github, Linkedin, FileText, Code2, Palette } from "lucide-react";
-import dp from "../assets/images/test.png";
+import dp from "../assets/images/test2.jpeg";
 // hello
 export default function Hero() {
   const containerRef = useRef(null);
