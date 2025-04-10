@@ -18,7 +18,7 @@ const projects = [
     image: apiSecurityImage,
     tech: ["Python", "Flask", "React", "JavaScript","MySQL", "Material UI", "AWS-EC2", "RDS", "Auto Scaling"] ,
     // links: { demo: "#", github: "#" },
-    links: { demo: "http://43.204.234.122/", github: "https://github.com/manish92596/Flipkart-Grid--Api-Security-Dashboard" },
+    links: { demo: "http://13.232.235.203/", github: "https://github.com/manish92596/Flipkart-Grid--Api-Security-Dashboard" },
     // icon: <Sparkles className="w-6 h-6 text-purple-400" />
   },
   {
