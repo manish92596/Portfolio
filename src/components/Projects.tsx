@@ -43,7 +43,7 @@ const projects = [
     description: "This application uses a machine learning model to predict whether an employee will leave or stay based on features like satisfaction level, last evaluation score, and more. The model is built using the K-Nearest Neighbors (KNN) algorithm, with hyperparameter tuning via GridSearchCV for optimal accuracy.",
     image: etp,
     tech: ["Machine Learning","Python", "Pandas", "NumPy", "scikit-learn"," Matplotlib", "Seaborn", "pickle", "Docker", "AWS (ECS/EC2)", "Flask" , "TypeScript"],
-    links: { demo: "http://13.127.68.160/etpp/", github: "https://github.com/manish92596/Employee-Turnover-Prediction" },
+    links: { demo: "http://65.0.107.0/", github: "https://github.com/manish92596/Employee-Turnover-Prediction" },
     // icon: <Globe className="w-6 h-6 text-green-400" />
   },
   {
