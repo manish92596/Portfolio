@@ -25,7 +25,7 @@ export default function Hero() {
   const socialLinks = useMemo(
     () => [
       { 
-        href: "https://drive.google.com/file/d/1goapvIwLlpdhaVyi1MGGygseIBvQGexo/view?usp=sharing", 
+        href: "https://drive.google.com/file/d/1zsSy2QDQGoNKxIPx60r69OgKnonaIp89/view?usp=sharing", 
         Icon: FileText, 
         label: "Resume",
         // preview: true 
@@ -73,14 +73,15 @@ export default function Hero() {
           ref={textRef}
           className="flex flex-col items-center justify-center max-w-xl md:items-start"
         >
-          <h1 className="mb-4 text-4xl font-bold text-center md:text-6xl md:text-left">
-                   Hello, I am{" "}
-           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-             Manish Kumar
-           </span>
-          </h1>
+          <h1 className="mb-4 text-4xl font-bold leading-tight text-center md:text-6xl md:text-left">
+  Hello, I am<br />
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+    Manish Kumar
+  </span>
+</h1>
+
           <p className="mb-8 text-lg leading-relaxed text-center text-gray-300 md:text-xl md:text-left">
-            I'm a passionate developer from IIIT Guwahati with a strong enthusiasm for Machine Learning, Deep Learning, and web development.
+          I'm a passionate developer from IIIT Guwahati with a strong enthusiasm for Machine Learning, Deep Learning, Web Development, and an AWS Cloud Enthusiast.
              Let's create impactful digital solutions together!
           </p>
 
