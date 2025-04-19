@@ -25,7 +25,7 @@ export default function Hero() {
   const socialLinks = useMemo(
     () => [
       { 
-        href: "https://drive.google.com/file/d/1zsSy2QDQGoNKxIPx60r69OgKnonaIp89/view?usp=sharing", 
+        href: "https://drive.google.com/file/d/1kli14Y0pBbu0abh1vNUnxO0sF8wSsH8k/view?usp=sharing", 
         Icon: FileText, 
         label: "Resume",
         // preview: true 
